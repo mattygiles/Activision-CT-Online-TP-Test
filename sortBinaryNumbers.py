@@ -7,7 +7,6 @@ import re
 import sys
 
 
-
 #
 # Complete the 'sortBinaryNumbers' function below.
 #
@@ -18,38 +17,45 @@ import sys
 
 def compare(index1, index2, bitArrays):
     for i in range(len(bitArrays[index1])):
-        if (bitArrays[index1][i] > bitArrays[index2][i]):
+        if bitArrays[index1][i] > bitArrays[index2][i]:
             return 1
-        elif (bitArrays[index1][i] < bitArrays[index2][i]):
+        elif bitArrays[index1][i] < bitArrays[index2][i]:
             return -1
     return 0
-            
+
 
 def compare_to_keys(my_compares, bitArrays):
     class A:
         def __init__(self, obj, *args):
             self.obj = obj
+
         def __lt__(self, other):
             return my_compares(self.obj, other.obj, bitArrays) < 0
+
         def __gt__(self, other):
             return my_compares(self.obj, other.obj, bitArrays) > 0
+
         def __eq__(self, other):
             return my_compares(self.obj, other.obj, bitArrays) == 0
+
         def __le__(self, other):
             return my_compares(self.obj, other.obj, bitArrays) <= 0
+
         def __ge__(self, other):
             return my_compares(self.obj, other.obj, bitArrays) >= 0
+
         def __ne__(self, other):
             return my_compares(self.obj, other.obj, bitArrays) != 0
+
     return A
 
-    
+
 def sortBinaryNumbers(bitArrays):
     for value in bitArrays:
-        value.sort(reverse = True)
-        
+        value.sort(reverse=True)
+
     array = [i for i in range(len(bitArrays))]
-    array.sort(reverse = True, key=compare_to_keys(compare, bitArrays))
+    array.sort(reverse=True, key=compare_to_keys(compare, bitArrays))
     return array
 
 
