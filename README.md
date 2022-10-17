@@ -15,9 +15,9 @@ Additionally, for the second question we recommend you choosing a language that 
 Additionally, I want to make sure you are aware that this position is located on-site in Sherman Oaks, California. 
 
 Please reach out with any questions in the meantime.
+<br></br>
 
-
-
+### avgRotorSpeed
 Get IOT devices by Parent Id > Coding
 REST API
 Back-End Development
