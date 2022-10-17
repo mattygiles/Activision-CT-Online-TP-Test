@@ -17,7 +17,7 @@ Additionally, I want to make sure you are aware that this position is located on
 Please reach out with any questions in the meantime.
 <br></br>
 
-### avgRotorSpeed
+# avgRotorSpeed
 Get IOT devices by Parent Id > Coding
 REST API
 Back-End Development
